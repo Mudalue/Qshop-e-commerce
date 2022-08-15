@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Container from "./components/containers/Container.jsx";
+import LandingPage from "./components/pages/homepages/LandingPage";
+import Category from "./components/pages/homepages/Category";
+import ProductPage from "./components/pages/homepages/ProductPage.jsx";
+import Cart from "./components/pages/homepages/Cart";
+import NotFound from "./components/organisms/NotFound";
 
 function App() {
+  const location = useLocation();
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* content routing is done here */}
+      <AnimatePresence location={location} key={location.pathname}>
+        <Routes>
+          <Route path="/" element={<Container />}>
+            <Route index element={<LandingPage />} />
+            <Route path="/category/:categoryid" element={<Category />} />
+            <Route path="/product/:productid" element={<ProductPage />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="*" element={<NotFound />} />
+          </Route>
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }
