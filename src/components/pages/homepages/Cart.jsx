@@ -8,17 +8,21 @@ import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const [cart, setCart] = useContext(AppContext);
-  const [count, setCount] = useState();
-  const [totalPrice, setTotalPrice] = useState([]);
+  const [count, setCount] = useState(0);
   let navigate = useNavigate();
 
   //link
   const handleClick = () => {
     navigate("/", { replace: true });
   };
-  
-
-
+  //checkout 
+  const checkout = () =>{
+    navigate("/employ-me", {replace: true})
+  }
+//clear cart
+const clearCart = () =>{
+  setCart([]);
+}
   return (
     <>
       {cart.length === 0 ? (
@@ -73,19 +77,17 @@ const Cart = () => {
                           size="sm"
                           onclick={() => {
                             let arr = [...cart];
-                            const getItem = arr.filter(
-                              (obj) => obj.id !== item.id
+                            let index = arr.findIndex(
+                              (_index) => _index.id === item.id
                             );
-                            console.log(getItem)
-                            console.log(arr)
-                            arr.push({
-                              id: item.id,
-                              itemName: item.itemName,
-                              price: item.price,
-                              amount: count * item.price,
-                              item: count,
-                            });
-                            setCart(arr)
+                            const getItem = arr.filter(
+                              (obj) => obj.id === item.id
+                            );
+                            let update = getItem[0];
+                            update.item = count;
+                            update.amount = count * update.price;
+                            arr[index] = update;
+                            setCart(arr);
                           }}
                         />
                       </div>
@@ -107,13 +109,14 @@ const Cart = () => {
                       </p>
                       <hr />
                       <div className="d-flex">
-                        <p className="me-2 fw-bold">No of Item:</p>
+                        <p className="me-2 fw-bold">Quantity:</p>
                         <input
                           type="number"
                           className="form-control"
                           style={{ width: 60, boxShadow: "none", height: 30 }}
                           defaultValue={item.item}
                           onChange={({ target: { value } }) => setCount(value)}
+                          min="0"
                         />
                       </div>
                     </div>
@@ -122,8 +125,8 @@ const Cart = () => {
               </>
             ))}
             <div className="text-center">
-              <h2 className="fw-bolder lh-lg">
-                Total amount: 
+              <h4 className="fw-bolder lh-lg">
+                Total amount:
                 <span className="mx-2">
                   &#8358;
                   {cart.reduce(
@@ -132,7 +135,15 @@ const Cart = () => {
                     0
                   )}
                 </span>
-              </h2>
+              </h4>
+            </div>
+            <div className="d-flex justify-content-center mb-2">
+              <div className="me-2">
+                <Button text="Checkout" color={colors.black} size="lg" onclick={checkout}/>
+              </div>
+              <div>
+                <Button text="Clear Cart" color={colors.red} size="lg" onclick={clearCart}/>
+              </div>
             </div>
           </div>
         </div>

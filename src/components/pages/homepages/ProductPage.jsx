@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import Button from "../../atoms/Button";
 import { colors } from "../../constants/colors";
 import { AppContext } from "../../context/CartContexts";
-import carousel from "../../asset/cristina-matos-albers-Ltv7a5m8i4c-unsplash.jpg";
+// import carousel from "../../asset/cristina-matos-albers-Ltv7a5m8i4c-unsplash.jpg";
 import Loader from "../../atoms/Loader";
 import Alert from "../../atoms/Alert";
 
@@ -102,17 +102,17 @@ const ProductPage = () => {
         <>
           <div className="container">
             <div className="row" style={{ margintop: 50 }}>
-              <div className="col-md-6">
+              <div className="col-md-6" style={{marginTop: 50}}>
                 <Slider {...settings}>
-                  {/* {imageUrl.map((image) => (
+                  {imageUrl.map((image) => (
                 <img src={image} alt="carousel" />
-              ))} */}
-                  <img
+              ))}
+                  {/* <img
                     src={carousel}
                     alt="carousel"
                     style={{ width: 200, height: 200 }}
                     className="img-fluid"
-                  />
+                  /> */}
                 </Slider>
               </div>
               <div className="col-md-6">
@@ -143,6 +143,7 @@ const ProductPage = () => {
                       style={{ width: 100, boxShadow: "none" }}
                       defaultValue={count}
                       onChange={({ target: { value } }) => setCount(value)}
+                      min='0'
                     />
                     <Button
                       text="Add to cart"

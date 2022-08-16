@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import dummy from "../asset/dummy.jpg";
+// import dummy from "../asset/dummy.jpg";
 
 const Card = ({ data }) => {
   let navigate = useNavigate();
@@ -10,29 +10,32 @@ const Card = ({ data }) => {
         <div className="row">
           {data.map((content) => (
             <>
-            <div className="col-md-3 mt-2" key={content.id}>
+            <div className="mt-2 col-lg-3 col-md-4 col-sm-12" key={content.id}>
               <div
-                className="card gallery-card"
+                className="card gallery-card cursor"
                 style={{
                   backgroundColor: "transparent",
                   padding: 20,
                   height: 400,
                 }}
+                onClick={() =>
+                  navigate(`/product/${content.id}`, { replace: true })
+                }
               >
                 <div style={{ textAlign: "center", marginTop: 30 }}>
                   <img
-                    // src={content.images[1]}
-                    src={dummy}
+                    src={content.images[1]}
+                    // src={dummy}
                     alt="frame"
                     style={{ width: "100%", height: 300 }}
                     className="img-fluid"
                   />
                   <div style={{ paddingTop: 10 }}>
                     <p
-                      className="text-dark m-0 lh-lg cursor"
-                      onClick={() =>
-                        navigate(`/product/${content.id}`, { replace: true })
-                      }
+                      className="text-dark m-0 lh-lg"
+                      // onClick={() =>
+                      //   navigate(`/product/${content.id}`, { replace: true })
+                      // }
                     >
                       {content.title}
                     </p>

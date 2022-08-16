@@ -19,7 +19,7 @@ const NotFound = () => {
               <img
                 src={notfoundimg}
                 alt="404img"
-                style={{ width: 500, height: 400 }}
+                style={{ width: "100%", height: 400 }}
               />
             </div>
             <div className="text-center">

@@ -92,8 +92,8 @@ const Navbar = () => {
                           <p className="pt-2 fw-bold">{category.name}</p>
                           <p>
                             <img
-                              // src={category.image}
-                              src={dummy}
+                              src={category.image}
+                              // src={dummy}
                               alt="category"
                               style={{
                                 width: 50,
@@ -111,7 +111,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                className="nav-link fw-bold d-flex cursor"
+                className="nav-link fw-bold d-flex cursor m-sm-0"
                 to="/cart"
                 tabIndex={-1}
                 aria-disabled="true"
