@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { getRequest } from "../../utils/api";
-import { category_endpoint } from "../../constants/endpoints";
+import { getRequest } from "../../../utils/api";
+import { category_endpoint } from "../../../constants/endpoints";
 import { Link, useNavigate } from "react-router-dom";
-import { AppContext } from "../../context/CartContexts";
-import dummy from '../../asset/cristina-matos-albers-Ltv7a5m8i4c-unsplash.jpg'
+import { AppContext } from "../../../context/CartContexts";
+import dummy from '../../../asset/cristina-matos-albers-Ltv7a5m8i4c-unsplash.jpg'
 
 const Navbar = () => {
     let navigate = useNavigate();
@@ -73,7 +73,7 @@ const Navbar = () => {
               <ul
                 className="dropdown-menu"
                 aria-labelledby="navbarDropdown"
-                style={{ width: 300, padding: 20 }}
+                style={{ width: 300, padding: "0" }}
               >
                 {response.length === 0 ? (
                   <>

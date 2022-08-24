@@ -6,7 +6,7 @@ import LandingPage from "./components/pages/homepages/LandingPage";
 import Category from "./components/pages/homepages/Category";
 import ProductPage from "./components/pages/homepages/ProductPage.jsx";
 import Cart from "./components/pages/homepages/Cart";
-import NotFound from "./components/organisms/NotFound";
+import NotFound from "./components/ui/organisms/NotFound";
 
 function App() {
   const location = useLocation();

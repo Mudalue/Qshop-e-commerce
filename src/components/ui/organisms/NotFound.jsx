@@ -1,8 +1,8 @@
 import React from "react";
 import Button from "../atoms/Button";
-import { colors } from "../constants/colors";
+import { colors } from "../../constants/colors";
 import { useNavigate } from "react-router-dom";
-import notfoundimg from "../asset/undraw_page_not_found_re_e9o6.svg";
+import notfoundimg from "../../asset/undraw_page_not_found_re_e9o6.svg";
 
 const NotFound = () => {
   let navigate = useNavigate();

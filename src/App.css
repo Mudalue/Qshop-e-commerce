@@ -50,8 +50,7 @@ input::placeholder {
   top: 5%;
   bottom: 0;
   left: 0;
-  height: auto;
-  width: "100%";
+  width: 310px;
   height: 330px;
   opacity: 0;
   transition: .5s ease;

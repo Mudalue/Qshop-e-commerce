@@ -4,12 +4,12 @@ import { useParams } from "react-router-dom";
 import { product_endpoint } from "../../constants/endpoints";
 import { getRequest } from "../../utils/api";
 import Slider from "react-slick";
-import Button from "../../atoms/Button";
+import Button from "../../ui/atoms/Button";
 import { colors } from "../../constants/colors";
 import { AppContext } from "../../context/CartContexts";
 // import carousel from "../../asset/cristina-matos-albers-Ltv7a5m8i4c-unsplash.jpg";
-import Loader from "../../atoms/Loader";
-import Alert from "../../atoms/Alert";
+import Loader from "../../ui/atoms/Loader";
+import Alert from "../../ui/atoms/Alert";
 
 const ProductPage = () => {
   var settings = {
@@ -23,7 +23,7 @@ const ProductPage = () => {
   let { productid } = useParams();
   const [response, setResponse] = useState({});
   const [imageUrl, setImageUrl] = useState([]);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [category, setCategory] = useState("");
   const [cart, setCart] = useContext(AppContext);
   const [show, setShow] = useState(false);
@@ -143,7 +143,7 @@ const ProductPage = () => {
                       style={{ width: 100, boxShadow: "none" }}
                       defaultValue={count}
                       onChange={({ target: { value } }) => setCount(value)}
-                      min='0'
+                      min='1'
                     />
                     <Button
                       text="Add to cart"

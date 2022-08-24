@@ -1,9 +1,9 @@
 import React, { useState, useEffect, createContext } from "react";
 import { useParams } from "react-router-dom";
 import { category_endpoint } from "../../constants/endpoints";
-import Card from "../../molecules/Card";
+import Card from "../../ui/molecules/Card";
 import { getRequest } from "../../utils/api";
-import Loader from "../../atoms/Loader";
+import Loader from "../../ui/atoms/Loader";
 
 const CategoryContext = createContext();
 const Category = () => {

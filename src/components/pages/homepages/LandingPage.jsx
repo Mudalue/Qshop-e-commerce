@@ -1,7 +1,7 @@
 import React, { useState, createContext, useEffect } from "react";
-import Loader from "../../atoms/Loader";
+import Loader from "../../ui/atoms/Loader";
 import { product_endpoint } from "../../constants/endpoints";
-import Card from "../../molecules/Card";
+import Card from "../../ui/molecules/Card";
 import { getRequest } from "../../utils/api";
 
 const ProductContext = createContext();

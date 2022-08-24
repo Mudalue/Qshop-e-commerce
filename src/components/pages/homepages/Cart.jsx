@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { AppContext } from "../../context/CartContexts";
-import Button from "../../atoms/Button";
+import Button from "../../ui/atoms/Button";
 import { colors } from "../../constants/colors";
 import { useNavigate } from "react-router-dom";
 
