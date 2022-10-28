@@ -135,8 +135,8 @@ const Navbar = () => {
                 aria-disabled="true"
                 style={style.link}
               >
-                <p className="mx-2">Cart</p>
-                <p>
+                <p>Cart</p>
+                <p className="mx-2">
                   <FontAwesomeIcon icon={faShoppingCart} className="text-danger"/>{" "}
                   <span className="text-dark fw-bold">{cart.length}</span>
                 </p>

@@ -115,3 +115,29 @@ input::placeholder {
     transform: translateY(0px);
   }
 }
+
+/* Phone screen */
+@media only screen and (max-width: 600px) {
+  .icon-position {
+    position: absolute;
+    bottom: 40%;
+    right: 55px !important;
+    z-index: 20;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .icon-position {
+    position: fixed;
+    bottom: 40px;
+    right: 25px !important;
+    z-index: 20;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .icon-position {
+    position: fixed;
+    bottom: 40px;
+    right: 25px !important;
+    z-index: 20;
+  }
+}

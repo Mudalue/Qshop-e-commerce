@@ -65,7 +65,7 @@ const LandingPage = () => {
                         })
                       }
                       key={category.id}
-                      style={{ margin: "3px 0" }}
+                      style={{ margin: "3px 0", display: "flex" }}
                     >
                       <span
                         className="pt-2"
