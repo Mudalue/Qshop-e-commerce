@@ -1,3 +1,4 @@
+import React from "react";
 import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
@@ -7,6 +8,7 @@ import Category from "./components/pages/homepages/Category";
 import ProductPage from "./components/pages/homepages/ProductPage.jsx";
 import Cart from "./components/pages/homepages/Cart";
 import NotFound from "./components/ui/organisms/NotFound";
+
 
 function App() {
   const location = useLocation();

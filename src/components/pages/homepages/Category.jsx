@@ -4,6 +4,7 @@ import { category_endpoint } from "../../constants/endpoints";
 import Card from "../../ui/molecules/Card";
 import { getRequest } from "../../utils/api";
 import Loader from "../../ui/atoms/Loader";
+import ScollToTop from "../../ui/atoms/ScollToTop";
 
 const CategoryContext = createContext();
 const Category = () => {
@@ -32,6 +33,7 @@ const Category = () => {
   }, []);
   return (
     <>
+    <ScollToTop />
       {show && <Loader />}
       {response !== "" ? (
         <>

@@ -5,7 +5,9 @@ import Card from "../../ui/molecules/Card";
 import { getRequest } from "../../utils/api";
 import { category_endpoint } from "../../constants/endpoints";
 import { useNavigate } from "react-router-dom";
+import ScollToTop from "../../ui/atoms/ScollToTop";
 const ProductContext = createContext();
+
 const LandingPage = () => {
   let navigate = useNavigate();
   const [response, setResponse] = useState([]);
@@ -42,6 +44,7 @@ const LandingPage = () => {
   }, []);
   return (
     <>
+    <ScollToTop />
       <div className="container">
         <div className="row">
           <div className="col-md-12  col-lg-12">
