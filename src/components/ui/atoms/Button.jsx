@@ -8,9 +8,10 @@ const Button = ({ text, onclick, size, color, width, disabled }) => {
         style={{
           backgroundColor: `${color}`,
           boxShadow: "none",
-          padding: "8px 30px",
+          padding: "8px 10px",
           width: `${width}`,
-          fontSize: 16
+          fontSize: 14,
+          borderRadius: 8
         }}
         onClick={onclick}
         disabled={disabled}

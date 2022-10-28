@@ -15,14 +15,14 @@ const Alert = ({ color, data }) => {
       >
         <div className="d-flex justify-content-between">
           <div className="d-flex">
-            <p className="mx-2">
+            <span className="mx-2">
               <FontAwesomeIcon
                 icon={color === "success" ? faCircleCheck : faCircleExclamation}
                 color={color}
-                className={`text-${color} pt-2`}
+                className={`text-${color}`}
               />
-            </p>
-            <p className={`text-${color} fw-bold lh-lg pb-2`}>{data}</p>
+            </span>
+            <span className={`text-${color} fw-bold lh-lg`} style={{fontSize: 12}}>{data}</span>
           </div>
           <div>
             <button

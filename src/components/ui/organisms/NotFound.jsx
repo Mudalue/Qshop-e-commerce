@@ -12,19 +12,19 @@ const NotFound = () => {
   };
   return (
     <>
-      <div className="container">
+      <div className="container" style={{marginBottom: 100}}>
         <div className="row justify-content-center">
           <div className="col-md-7">
             <div className="text-center">
               <img
                 src={notfoundimg}
                 alt="404img"
-                style={{ width: "100%", height: 400 }}
+                style={{ width: 400, height: 400 }}
               />
             </div>
             <div className="text-center">
-              <h5 className="fw-bold lh-lg">
-                Page would be available <br /> after Interview.
+              <h5 className="fw-bold lh-lg" style={{fontSize: 16}}>
+                Page not available yet.
               </h5>
               <Button
                 text="Go Back"

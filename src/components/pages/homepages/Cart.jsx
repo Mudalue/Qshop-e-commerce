@@ -27,7 +27,7 @@ const clearCart = () =>{
     <>
       {cart.length === 0 ? (
         <>
-          <div style={{ marginTop: 50 }}>
+          <div style={{ marginTop: 100, marginBottom: 100 }}>
             <div className="text-center">
               <FontAwesomeIcon
                 icon={faCartShopping}
@@ -44,7 +44,7 @@ const clearCart = () =>{
           </div>
         </>
       ) : (
-        <div className="container">
+        <div className="container" style={{marginBottom: 50}}>
           <div className="row justify-content-center">
             {cart.map((item) => (
               <>
@@ -72,8 +72,8 @@ const clearCart = () =>{
                       </div>
                       <div>
                         <Button
-                          text="update cart"
-                          color={colors.yellow}
+                          text="update item"
+                          color={colors.black}
                           size="sm"
                           onclick={() => {
                             let arr = [...cart];
@@ -93,27 +93,27 @@ const clearCart = () =>{
                       </div>
                     </div>
                     <div style={{ marginTop: 10 }}>
-                      <p className="fw-bold">
+                      <p className="fw-bold" style={{fontSize: 14}}>
                         Product:{" "}
-                        <span className="fw-light">{item.itemName}</span>
+                        <span className="fw-light" style={{fontWeight: 100, fontSize: 12}}>{item.itemName}</span>
                       </p>
                       <hr />
-                      <p className="fw-bold">
+                      <p className="fw-bold" style={{fontSize: 14}}>
                         Price:{" "}
-                        <span className="fw-light">&#8358; {item.price} </span>
+                        <span className="fw-light" style={{fontWeight: 100, fontSize: 12}}>&#8358; {item.price} </span>
                       </p>
                       <hr />
-                      <p className="fw-bold">
+                      <p className="fw-bold" style={{fontSize: 14}}>
                         sub amount:{" "}
-                        <span className="fw-light">&#8358; {item.amount} </span>
+                        <span className="fw-light" style={{fontWeight: 100, fontSize: 12}}>&#8358; {item.amount} </span>
                       </p>
                       <hr />
                       <div className="d-flex">
-                        <p className="me-2 fw-bold">Quantity:</p>
+                        <p className="me-2 fw-bold" style={{fontSize: 14}}>Quantity:</p>
                         <input
                           type="number"
                           className="form-control"
-                          style={{ width: 60, boxShadow: "none", height: 30 }}
+                          style={{ width: 60, boxShadow: "none", height: 30, fontSize: 12 }}
                           defaultValue={item.item}
                           onChange={({ target: { value } }) => setCount(value)}
                           min="0"
@@ -125,9 +125,9 @@ const clearCart = () =>{
               </>
             ))}
             <div className="text-center">
-              <h4 className="fw-bolder lh-lg">
+              <h6 className="lh-lg">
                 Total amount:
-                <span className="mx-2">
+                <span className="mx-2 fw-bold" style={{fontSize: 20}}>
                   &#8358;
                   {cart.reduce(
                     (total, currentItem) =>
@@ -135,7 +135,7 @@ const clearCart = () =>{
                     0
                   )}
                 </span>
-              </h4>
+              </h6>
             </div>
             <div className="d-flex justify-content-center mb-2">
               <div className="me-2">

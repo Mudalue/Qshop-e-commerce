@@ -2,6 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import { motion } from "framer-motion";
 import Navbar from "../ui/organisms/home/Navbar";
+import Footer from "../ui/organisms/home/Footer";
 
 const Container = () => {
   return (
@@ -13,6 +14,7 @@ const Container = () => {
       >
         <Navbar />
         <Outlet />
+        <Footer />
       </motion.div>
     </>
   );

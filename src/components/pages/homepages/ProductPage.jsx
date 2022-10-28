@@ -94,6 +94,7 @@ const ProductPage = () => {
   }, []);
   return (
     <>
+      {alerting.show && <Alert color={alerting.color} data={alerting.data} />}
       {show === true ? (
         <>
           <Loader />
@@ -101,12 +102,12 @@ const ProductPage = () => {
       ) : (
         <>
           <div className="container">
-            <div className="row" style={{ margintop: 50 }}>
-              <div className="col-md-6" style={{marginTop: 50}}>
+            <div className="row" style={{ margintop: 30, marginBottom: 50 }}>
+              <div className="col-md-6" style={{ marginTop: 20 }}>
                 <Slider {...settings}>
                   {imageUrl.map((image) => (
-                <img src={image} alt="carousel" />
-              ))}
+                    <img src={image} alt="carousel" />
+                  ))}
                   {/* <img
                     src={carousel}
                     alt="carousel"
@@ -117,23 +118,41 @@ const ProductPage = () => {
               </div>
               <div className="col-md-6">
                 <div style={{ paddingTop: 50 }}>
-                  {alerting.show && (
-                    <Alert color={alerting.color} data={alerting.data} />
-                  )}
-                  <h2 className="fw-bolder">{response.title}</h2>
+                  <h4 className="fw-bold" style={{ color: "#928D8D" }}>
+                    {response.title}
+                  </h4>
+                  <hr />
                   <div>
-                    <h6 className="fw-bold">Price</h6>
-                    <h2 className="fw-bolder">&#8358; {response.price}</h2>
+                    <h6 style={{ fontSize: 14 }} className="fw-bold">
+                      Price
+                    </h6>
+                    <h2 className="fw-bolder" style={{ color: "#928D8D" }}>
+                      &#8358; {response.price}
+                    </h2>
+                  </div>
+                  <hr />
+                  <div>
+                    <h6 style={{ fontSize: 14 }} className="fw-bold">
+                      Description
+                    </h6>
+                    <p
+                      className="lh-lg"
+                      style={{ fontSize: 12, color: "#928D8D" }}
+                    >
+                      {response.description}
+                    </p>
                   </div>
 
                   <div>
-                    <h6 className="fw-bold">Description</h6>
-                    <p className="lh-lg">{response.description}</p>
-                  </div>
-
-                  <div>
-                    <h6 className="fw-bold">Category</h6>
-                    <p>{category}</p>
+                    <h6 style={{ fontSize: 14 }} className="fw-bold">
+                      Category
+                    </h6>
+                    <p
+                      className="lh-lg"
+                      style={{ fontSize: 12, color: "#928D8D" }}
+                    >
+                      {category}
+                    </p>
                   </div>
 
                   <div className="d-flex">
@@ -143,7 +162,7 @@ const ProductPage = () => {
                       style={{ width: 100, boxShadow: "none" }}
                       defaultValue={count}
                       onChange={({ target: { value } }) => setCount(value)}
-                      min='1'
+                      min="1"
                     />
                     <Button
                       text="Add to cart"

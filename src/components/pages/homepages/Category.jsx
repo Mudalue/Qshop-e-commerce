@@ -39,7 +39,7 @@ const Category = () => {
             <div className="container">
               <div className="row">
                 <div className="col-md-12">
-                  <h2 className="fw-bolder px-2" style={{ fontSize: 30 }}>
+                  <h2 style={{ fontSize: 16 }} className='fw-bold'>
                     {categoryName}
                   </h2>
                 </div>
