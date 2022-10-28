@@ -45,7 +45,7 @@ const LandingPage = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12  col-lg-12">
-            <div className="d-flex" style={{flexWrap: "wrap", justifyContent: "space-evenly"}}>
+            <div className="d-flex" style={{flexWrap: "wrap", justifyContent: "space-evenly", margin: '10px 0'}}>
             {category.length === 0 ? (
               <>
                 <p>{error}</p>
@@ -62,7 +62,7 @@ const LandingPage = () => {
                         })
                       }
                       key={category.id}
-                      style={{ margin: "20px 0" }}
+                      style={{ margin: "3px 0" }}
                     >
                       <span
                         className="pt-2"
