@@ -46,7 +46,7 @@ const Card = ({ data }) => {
                         style={{
                           fontSize: 12,
                           fontWeight: 400,
-                          color: "#928D8D",
+                          color: "#000",
                         }}
                       >
                         {content.title}

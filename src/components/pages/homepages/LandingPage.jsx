@@ -66,7 +66,7 @@ const LandingPage = () => {
                     >
                       <span
                         className="pt-2"
-                        style={{ fontWeight: 400, fontSize: 14, color: "#928D8D" }}
+                        style={{ fontWeight: 400, fontSize: 14, color: "#000" }}
                       >
                         {content.name}
                       </span>
