@@ -11,6 +11,10 @@ const style = {
     fontWeight: "300",
     fontSize: 14,
   },
+  button: {
+    fontSize: 13,
+    borderRadius: 8
+  }
 };
 const Navbar = () => {
   let navigate = useNavigate();
@@ -30,7 +34,7 @@ const Navbar = () => {
   }, []);
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-      <div className="container" style={{ padding: "20px 10px" }}>
+      <div className="container" style={{ padding: "1px 10px" }}>
         <Link
           className="navbar-brand fw-bolder"
           to="/"
@@ -137,23 +141,20 @@ const Navbar = () => {
               >
                 <p>Cart</p>
                 <p className="mx-2">
-                  <FontAwesomeIcon icon={faShoppingCart} className="text-danger"/>{" "}
+                  <FontAwesomeIcon
+                    icon={faShoppingCart}
+                    className="text-danger"
+                  />{" "}
                   <span className="text-dark fw-bold">{cart.length}</span>
                 </p>
               </Link>
             </li>
           </ul>
           <form className="d-flex" style={{ position: "relative" }}>
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-              style={{ boxShadow: "none" }}
-            />
-            <p style={{ position: "absolute", top: "18%", right: "13%" }}>
-              <FontAwesomeIcon icon={faSearch} />
-            </p>
+            <div className="d-flex">
+              <button className="btn btn-outline-dark mx-2" style={style.button}>Login</button>
+              <button className="btn btn-outline-dark" style={style.button}>Sign up</button>
+            </div>
           </form>
         </div>
       </div>

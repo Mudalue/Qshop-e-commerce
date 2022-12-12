@@ -8,7 +8,7 @@ const Card = ({ data }) => {
     <>
       <div className="container">
         <div className="row">
-          {data.map((content) => (
+          {data.currentData().map((content) => (
             <>
               <div
                 className="mt-2 col-lg-3 col-md-4 col-sm-12"
@@ -45,7 +45,7 @@ const Card = ({ data }) => {
                         // }
                         style={{
                           fontSize: 12,
-                          fontWeight: 400,
+                          fontWeight: 200,
                           color: "#000",
                         }}
                       >
