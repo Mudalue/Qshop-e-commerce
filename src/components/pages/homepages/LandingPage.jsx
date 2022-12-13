@@ -24,7 +24,6 @@ const LandingPage = () => {
   const getAllProduct = async () => {
     setShow(true);
     const response = await getRequest(product_endpoint.product);
-    console.log(response);
     if (response.status === 200) {
       setResponse(response.data);
     }
@@ -36,7 +35,6 @@ const LandingPage = () => {
   //get Category
   const getCategory = async () => {
     const response = await getRequest(category_endpoint.categories);
-    console.log(response);
     if (response.status === 200) {
       setCategory(response.data);
     }
@@ -69,10 +67,9 @@ const LandingPage = () => {
                 alignItems: "center",
                 backgroundImage: `linear-gradient(25deg,#d64c7f,#ee4758 50%)`,
               }}
-              className="bg-dark"
             >
               <div>
-                <h4 className="text-light fw-bold">Welcome to Tgf stores</h4>
+                <h4 className="text-light fw-bold text-center">Welcome to Tgf stores</h4>
                 <p
                   className="text-light"
                   style={{ fontSize: 12, fontWeight: 200 }}

@@ -8,7 +8,7 @@ import Category from "./components/pages/homepages/Category";
 import ProductPage from "./components/pages/homepages/ProductPage.jsx";
 import Cart from "./components/pages/homepages/Cart";
 import NotFound from "./components/ui/organisms/NotFound";
-
+import About from "./components/pages/homepages/About";
 
 function App() {
   const location = useLocation();
@@ -22,6 +22,7 @@ function App() {
             <Route path="/category/:categoryid" element={<Category />} />
             <Route path="/product/:productid" element={<ProductPage />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/about-us" element={<About />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

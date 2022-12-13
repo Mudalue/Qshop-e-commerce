@@ -69,7 +69,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link  cursor" to="0#" style={style.link}>
+              <Link className="nav-link  cursor" to="/about-us" style={style.link}>
                 About us
               </Link>
             </li>
