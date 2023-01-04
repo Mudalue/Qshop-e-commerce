@@ -33,10 +33,10 @@ const Navbar = () => {
     getCategory();
   }, []);
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
       <div className="container" style={{ padding: "1px 10px" }}>
         <Link
-          className="navbar-brand fw-bolder"
+          className="navbar-brand fw-bolder text-light"
           to="/"
           style={{ fontSize: 25 }}
         >
@@ -60,7 +60,7 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 pt-3">
             <li className="nav-item">
               <Link
-                className="nav-link active  cursor"
+                className="nav-link active  cursor text-light"
                 aria-current="page"
                 to="/"
                 style={style.link}
@@ -69,12 +69,12 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link  cursor" to="/about-us" style={style.link}>
+              <Link className="nav-link  cursor text-light" to="/about-us" style={style.link}>
                 About us
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link  cursor" to="0#" style={style.link}>
+              <Link className="nav-link  cursor text-light" to="0#" style={style.link}>
                 Contact us
               </Link>
             </li>
@@ -139,7 +139,7 @@ const Navbar = () => {
                 aria-disabled="true"
                 style={style.link}
               >
-                <p>Cart</p>
+                <p className="text-light">Cart</p>
                 <p className="mx-2">
                   <FontAwesomeIcon
                     icon={faShoppingCart}
